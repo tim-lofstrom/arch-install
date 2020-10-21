@@ -18,19 +18,19 @@ Check if `/sys/firmware/efi/efivars` directory exists, if yes we are in `UEFI`. 
 
 1. For `UEFI` mode, use GPT partitioning.
 
-    |      Mount point      |         Partition         |     Partition type    |      Suggested size     |   |
-    |:---------------------:|:-------------------------:|:---------------------:|:-----------------------:|---|
-    | /mnt/boot or /mnt/efi | /dev/efi_system_partition | EFI system partition  | At least 260 MiB        |   |
-    | [SWAP]                | /dev/swap_partition       | Linux swap            | More than 512 MiB       |   |
-    | /mnt                  | /dev/root_partition       | Linux x86-64 root (/) | Remainder of the device |   |
+    |      Mount point      |         Partition         |     Partition type    |      Suggested size     |
+    |:---------------------:|:-------------------------:|:---------------------:|:-----------------------:|
+    | /mnt/boot or /mnt/efi | /dev/efi_system_partition | EFI system partition  | At least 260 MiB        |
+    | [SWAP]                | /dev/swap_partition       | Linux swap            | More than 512 MiB       |
+    | /mnt                  | /dev/root_partition       | Linux x86-64 root (/) | Remainder of the device |
 
 2. For `BIOS` mode, use MBR partitioning.
 
-    | Mount point |      Partition      | Partition type |      Suggested size     |   |
-    |:-----------:|:-------------------:|:--------------:|:-----------------------:|---|
-    | [SWAP]      | /dev/swap_partition | Linux swap     | More than 512 MiB       |   |
-    | /mnt        | /dev/root_partition | Linux          | Remainder of the device |   |
-    |             |                     |                |                         |   |
+    | Mount point |      Partition      | Partition type |      Suggested size     |
+    |:-----------:|:-------------------:|:--------------:|:-----------------------:|
+    | [SWAP]      | /dev/swap_partition | Linux swap     | More than 512 MiB       |
+    | /mnt        | /dev/root_partition | Linux          | Remainder of the device |
+    |             |                     |                |                         |
 
 ## Connect to internet
 
